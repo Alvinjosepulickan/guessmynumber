@@ -1,7 +1,8 @@
 'use strict';
 
 
-let secretNumber= Math.random() * (20) + 1;
+let secretNumber= Math.trunc(Math.random() * 20) + 1;
+console.log(secretNumber);
 let score=20;
 let highscore=0;
 
@@ -34,8 +35,8 @@ document.querySelector('.check').addEventListener('click', function () {
             score--;
             document.querySelector('.score').textContent = score;
           } else {
-            displayMessage('💥 You lost the game!');
             document.querySelector('body').style.backgroundColor = 'red';
+            displayMessage('💥 You lost the game!');
             document.querySelector('.score').textContent = 0;
           }
 
